@@ -10,14 +10,11 @@ function App() {
   const { REACT_APP_BACKEND_URL } = process.env
   useEffect(() => {
     axios.get(REACT_APP_BACKEND_URL).then(res => {
-      console.log(res.data)
       setCleaners(res.data)
     }
     )
   }, [REACT_APP_BACKEND_URL, submitted]) //run on mount and only rerun this effect if submitted value changes
-  // useEffect(() => {
-  //   console.log('cleaners', cleaners)
-  // }, [cleaners])
+
   const handleSubmit = (e) => {
     e.preventDefault()
     const person = {
