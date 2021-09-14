@@ -10,6 +10,7 @@ function App() {
   const { REACT_APP_BACKEND_URL } = process.env
   useEffect(() => {
     axios.get(REACT_APP_BACKEND_URL).then(res => {
+      console.log(res.data)
       setCleaners(res.data)
     }
     )
