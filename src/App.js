@@ -75,7 +75,7 @@ function App() {
                   Date: 09/25/2021 (Sat.)
                 </Typography>
                 <Typography variant="h6" component="h2">
-                  Time: 3:00pm - 4:00pm
+                  Time: 7:00am - 8:00am
                 </Typography>
                 <Typography variant="h6" component="h2">
                   Location: Gary church building (33794 N Gary Rd, Queen Creek, AZ 85242)
