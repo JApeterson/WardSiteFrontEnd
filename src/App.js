@@ -28,10 +28,7 @@ function App() {
       setCleaners(res.data)
     }
     )
-  }, [submitted, REACT_APP_BACKEND_URL]) //run on mount and only rerun this effect if submitted value changes
-  useEffect(() => {
-    console.log(cleaners)
-  }, [cleaners])
+  }, [submitted, REACT_APP_BACKEND_URL])
   const handleSubmit = (e) => {
     e.preventDefault()
     const person = {
@@ -137,7 +134,7 @@ function App() {
                 <Typography>
                   See List of those who have signed up
                 </Typography>
-                {cleaners ? <List dense={true}>
+                {cleaners.length > 0 ? <List dense={true}>
                   {cleaners.map((each, index) => (
                     <ListItem key={index}>
                       <ListItemText>{each.name}</ListItemText>
