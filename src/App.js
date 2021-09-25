@@ -1,4 +1,4 @@
-import { CardContent, Grid, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Container, Typography, Card, TextField, Button, List, ListItem, ListItemText } from '@material-ui/core';
+import { CardContent, CircularProgress, Grid, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Container, Typography, Card, TextField, Button, List, ListItem, ListItemText } from '@material-ui/core';
 import { useState, useEffect } from 'react';
 const axios = require('axios');
 
@@ -137,14 +137,15 @@ function App() {
                 <Typography>
                   See List of those who have signed up
                 </Typography>
-                <List dense={true}>
+                {cleaners ? <List dense={true}>
                   {cleaners.map((each, index) => (
                     <ListItem key={index}>
                       <ListItemText>{each.name}</ListItemText>
                     </ListItem>
                   )
                   )}
-                </List>
+                </List> : <CircularProgress />}
+
               </CardContent>
             </Card>
           </Grid>
