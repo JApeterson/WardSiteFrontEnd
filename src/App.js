@@ -30,8 +30,8 @@ function App() {
     )
   }, [submitted, REACT_APP_BACKEND_URL]) //run on mount and only rerun this effect if submitted value changes
   useEffect(() => {
-    console.log(phoneNumber)
-  }, [phoneNumber])
+    console.log(cleaners)
+  }, [cleaners])
   const handleSubmit = (e) => {
     e.preventDefault()
     const person = {
