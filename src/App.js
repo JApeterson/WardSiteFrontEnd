@@ -134,16 +134,18 @@ function App() {
             <Card raised>
               <CardContent>
                 <Typography>
-                  See List of those who have signed up
+                  See a list of those who have signed up below:
                 </Typography>
-                {<List dense={true}>
+                {cleaners.length > 0 ? <List dense={true}>
                   {cleaners.map((each, index) => (
                     <ListItem key={index}>
                       <ListItemText>{each.name}</ListItemText>
                     </ListItem>
                   )
                   )}
-                </List>}
+                </List> : <Typography>
+                  No one in this list yet.
+                </Typography>}
 
               </CardContent>
             </Card>
