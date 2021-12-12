@@ -6,6 +6,7 @@ function App() {
   const [name, setName] = useState("")
   const [cleaners, setCleaners] = useState([])
   const [submitted, setSubmission] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [reminder, setReminder] = useState('no')
   const [notificationType, setNotificationType] = useState('')
   const [email, setEmail] = useState('')
@@ -33,6 +34,7 @@ function App() {
   }, [submitted, REACT_APP_BACKEND_URL])
   const handleSubmit = (e) => {
     e.preventDefault()
+    setSubmitting(true)
     const person = {
       name,
       notificationType,
@@ -43,6 +45,7 @@ function App() {
     // Make a request for a user with a given ID
     axios.post(REACT_APP_BACKEND_URL, person)
       .then(function (response) {
+        setSubmitting(false)
         setSubmission(true)
       })
       .catch(function (error) {
