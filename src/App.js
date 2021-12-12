@@ -71,7 +71,7 @@ function App() {
                   Please submit name to sign up.Thank you!
                 </Typography>
                 <Typography variant="h6" component="h2">
-                  Date: 09/25/2021 (Sat.)
+                  Date: 01/01/2022 (Sat.)
                 </Typography>
                 <Typography variant="h6" component="h2">
                   Time: 9:00am - 10:00am
@@ -136,14 +136,14 @@ function App() {
                 <Typography>
                   See List of those who have signed up
                 </Typography>
-                {cleaners.length > 0 ? <List dense={true}>
+                {<List dense={true}>
                   {cleaners.map((each, index) => (
                     <ListItem key={index}>
                       <ListItemText>{each.name}</ListItemText>
                     </ListItem>
                   )
                   )}
-                </List> : <CircularProgress />}
+                </List>}
 
               </CardContent>
             </Card>
