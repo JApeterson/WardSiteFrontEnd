@@ -21,6 +21,8 @@ function App() {
     setReminder(event.target.value);
   };
   const handleNotification = (event) => {
+    setEmail("")
+    setPhoneNumber("")
     setNotificationType(event.target.value);
   };
   useEffect(() => {
@@ -52,7 +54,7 @@ function App() {
   return (
     <Container maxWidth="md">
       {submitted ?
-        <Grid item xs={12}><Card raised><CardContent><Typography color={'primary'}>Thanks for signing up! This Saturday you get donuts!</Typography></CardContent></Card></Grid>
+        <Grid item xs={12}><Card raised><CardContent><Typography color={'primary'}>Thanks for signing up!</Typography></CardContent></Card></Grid>
         :
         <Grid container spacing={2}>
 
@@ -72,7 +74,7 @@ function App() {
                   Date: 09/25/2021 (Sat.)
                 </Typography>
                 <Typography variant="h6" component="h2">
-                  Time: 7:00am - 8:00am
+                  Time: 9:00am - 10:00am
                 </Typography>
                 <Typography variant="h6" component="h2">
                   Location: Gary church building (33794 N Gary Rd, Queen Creek, AZ 85242)
